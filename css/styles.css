@@ -44,13 +44,15 @@ address {
     text-decoration: none;
 }
 
-/* SECTION-HEADER */
+/* ================================= PAGE-HEADER ============================== */
+
+.page-header {
+    border-bottom: 1px solid #e7e9fc;
+}
 
 .container-header {
     display: flex;
     justify-content: space-between;
-    padding-top: 24px;
-    padding-bottom: 24px;
 }
 
 .logo-header {
@@ -61,6 +63,10 @@ font-weight: 700;
 text-transform: uppercase;
 line-height: 1.17;
 letter-spacing: 0.54px;
+
+display: block;
+padding: 24px 0;
+margin-right: 76px;
 }
 
 .logo-header span {
@@ -69,12 +75,12 @@ letter-spacing: 0.54px;
 
 .navigate {
     display: flex;
+    align-items: center;
 }
 
 .list-navigate {
     display: flex;
     gap: 40px;
-    margin-left: 76px;
 }
 
 .list-navigate .link {
@@ -82,6 +88,14 @@ letter-spacing: 0.54px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     font-weight: 500;
+
+    display: inline-block;
+    padding: 24px 0;
+}
+
+.list-contacts .link {
+    display: inline-block;
+    padding: 24px 0;
 }
 
 .list-navigate .link:hover,
@@ -105,16 +119,13 @@ letter-spacing: 0.32px;
     color: #404BBF;
 }
 
-/* SECTION-HERO */
-
-.container-hero {
-    padding-top: 188px;
-    padding-bottom: 188px;
-}
+/* ============================== SECTION-HERO ============================== */
 
 .section-hero {
     background-color: #2E2F42;
     text-align: center;
+
+    padding: 188px 0;
 
 }
 
@@ -124,18 +135,29 @@ letter-spacing: 0.32px;
     font-weight: 700;
     line-height: 1.07;
     letter-spacing: 1.12px;
+
+    max-width: 496px;
+    margin-right: auto;
+    margin-left: auto;
     margin-bottom: 48px;
 }
 
 .btn {
-    color: white;
-    background-color: #4D5AE5;
+color: white;
+background-color: #4D5AE5;
 font-size: 16px;
 font-weight: 500;
 line-height: 1.5;
 letter-spacing: 0.64px;
 
+display: block;
+margin: 0 auto;
+min-width: 169px;
+height: 56px;
+border: none;
+border-radius: 4px;
 cursor: pointer;
+
 }
 
 .btn:hover,
@@ -143,15 +165,19 @@ cursor: pointer;
     background-color: #404BBF;
 }
 
-/* SECTION-ADVANTAGES */
+/* ============================== SECTION-ADVANTAGES ============================== */
 
-.title-advantages {
+.visually-hidden {
     display: none;
 }
 
 .list-advantages {
     display: flex;
     gap: 24px;
+}
+
+.item-advantages {
+    width: calc((100%-72px)/4);
 }
 
 .item-advantages .title-item {
@@ -161,6 +187,8 @@ cursor: pointer;
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0.02em;
+
+    margin-bottom: 8px;
 }
 
 .item-advantages .text-item {
@@ -168,7 +196,7 @@ cursor: pointer;
     letter-spacing: 0.02em;
 }
 
-/* SECTION-TEAM */
+/* ============================== SECTION-TEAM ============================== */
 
 .section-team {
     background-color: #F4F4FD;
@@ -181,18 +209,26 @@ cursor: pointer;
     letter-spacing: 0.02em;
     text-transform: capitalize;
     color: #2E2F42;
+
+    margin-bottom: 72px;
 }
 
 .list-team {
     display: flex;
 }
 
+.item-team {
+    background-color: #ffffff;
+
+    border-radius: 0px 0px 4px 4px;
+}
+
 .item-team:not(:last-child) {
     margin-right: 24px;
 }
 
-.item-team {
-    background-color: #ffffff;
+.item-portfolio .name-item {
+    padding: 32px 0;
 }
 
 .item-team .title-item {
@@ -202,15 +238,20 @@ cursor: pointer;
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0.02em;
+
+    text-align: center;
+    margin-bottom: 8px;
 }
 
 .item-team .text-item {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+
+    text-align: center;
 }
 
-/* SECTION-PORTFOLIO */
+/* ============================== SECTION-PORTFOLIO ============================== */
 
 .title-portfolio {
     font-size: 36px;
@@ -232,7 +273,14 @@ cursor: pointer;
 
 
 .item-portfolio {
-    max-width: 360px;
+    width: calc((100% - 48px) / 3)
+}
+
+.item-portfolio .name-item {
+    padding: 32px 0;
+    border: 1px solid #e7e9fc;
+    border-top: none;
+
 }
 
 .title-item {
@@ -242,22 +290,23 @@ cursor: pointer;
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0.02em;
+
+    text-align: center;
+    margin-bottom: 8px;
 }
 
 .text-item {
     line-height: 1.5;
     letter-spacing: 0.02em;
+
+    text-align: center;
 }
 
-/* SECTION-FOOTER */
+/* ============================== PAGE-FOOTER ============================== */
 
-.section-footer {
+.page-footer {
     background-color: #2E2F42;
-}
-
-.container-footer {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding: 100px 0;
 }
 
 .logo-footer {
@@ -269,8 +318,8 @@ text-transform: uppercase;
 line-height: 1.17;
 letter-spacing: 0.54px;
 
-display: block;
-margin-bottom: 17.5px;
+display: inline-block;
+margin-bottom: 16px;
 
 }
 
